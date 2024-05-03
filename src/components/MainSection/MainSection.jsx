@@ -6,6 +6,7 @@ import "./MainSection.scss"
 import SideBar from '../SideBar/SideBar';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import TechAnimation from '../Tech/TechAnimation';
+import Projects from '../../pages/projects/Projects';
 
 
 function MainSection({ theme, changeTheme }) {
@@ -46,10 +47,10 @@ function MainSection({ theme, changeTheme }) {
             transition={{ ease: "easeOut", duration: 2 }}
           >
             <div className='infoText'>
-             <span> Hi There I'm a </span>
-             <span>  MERN Stack  </span> 
-             <span>  Dev  </span> 
-              </div>
+              <span> Hi There I'm a </span>
+              <span>  MERN Stack  </span>
+              <span>  Dev  </span>
+            </div>
 
             {/* <img src={Background} className='image' /> */}
           </motion.div>
@@ -77,11 +78,13 @@ function MainSection({ theme, changeTheme }) {
         </div>
       </div>
 
-      {/* <Story/> */}
-      {/* <About/> */}
 
-<div className='technician' id='story'>
-      <TechAnimation/>
+      <div className='technician' id='story'>
+        <TechAnimation />
+      </div>
+
+      <div className='projects' id='projects'>
+        <Projects />
       </div>
     </>
   )
