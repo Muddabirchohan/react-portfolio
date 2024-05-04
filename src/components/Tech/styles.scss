@@ -1,17 +1,24 @@
+.technician {
+
+    background-color: beige;
+}
+
 .head {
 
-    margin:  5rem 0rem 0 0rem;
-    background-color: beige;
+    // margin:  5rem 0rem 0 0rem;
+    // background-color: beige;
+    
     text-align: center;
     color: #616161;
     font-family: 'Poppins';
     font-weight: 900;
     font-size: 50px;
-    
+
 }
 
 .card {
-    margin: 100px auto;
+    // margin: 100px auto;
+    margin: 100px 0px 103px 15px;
     max-width: 500px;
     padding-bottom: 100px;
     font-size: 164px;
@@ -48,14 +55,23 @@
     top: 0;
     clip-path: path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
         );
+
+   
 }
 
-.splashContent{
+.emoji {
+    height: 170px !important;
+    width: 170px !important;
+    
+}
+
+.splashContent {
     width: 790px;
     padding: 5rem;
     font-family: 'Poppins';
     font-weight: 500;
     color: white;
+    border-radius: 12px;
 
 }
 
@@ -76,20 +92,20 @@
         // margin:  5rem 0rem 0 0rem;
         background-color: beige;
         text-align: center;
-        color: #616161;
+        color: #7b6aff;
         font-family: 'Poppins';
         font-weight: 900;
         font-size: 50px;
         margin-top: 17rem;
     }
-    
+
     .card {
-        margin: 40px auto;
+        margin: 30px 100px 178px 100px;
         max-width: 500px;
-        padding-bottom: 100px;
+        padding-bottom: 0px;
         font-size: 164px;
-        width: 250px;
-        height: 305px;
+        width: 190px;
+        height: 235px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -100,7 +116,7 @@
             0 0 16px hsl(0deg 0% 0% / 0.075);
         transform-origin: 10% 60%;
     }
-    
+
     .card-container {
         overflow: hidden;
         // display: flex;
@@ -111,19 +127,19 @@
         // margin-bottom: -120px;
         background-color: beige;
     }
-    
 
-    
-    .splashContent{
+
+
+    .splashContent {
 
         display: none;
-    
+
     }
-    
+
     .splashTitle {
         display: none;
 
     }
-    
+
 
 }

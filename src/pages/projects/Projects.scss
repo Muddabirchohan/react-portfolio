@@ -1,11 +1,5 @@
 .projectsContainer {
-    height: 800px;
-    margin-top: 7rem;
-
-
-
-
-    // border: 2px solid red
+    height: 375vh;
 }
 
 
@@ -16,10 +10,11 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 150px;
+        gap: 50px;
         padding: 40px;
         border-radius: 8px;
         background-color: antiquewhite;
+        margin-top: 6rem;
 
         .header {
             padding: 10px;
@@ -52,9 +47,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 150px;
+    gap: 100px;
     padding: 40px;
-    background: rgb(66 68 73);
+    background: rgb(45 131 96);
 
     .header {
         padding: 10px;

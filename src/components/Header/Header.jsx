@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.scss";
+import { Navigation } from "../Navigation/Navigation";
+import { Hamburger } from "../Navigation/RootHamburgder";
 
 function Header({ theme, changeTheme }) {
 
@@ -18,30 +20,27 @@ function Header({ theme, changeTheme }) {
 
   return (
     <div className={`header-parent`}>
+      {/* <Navigation/> */}
 
 
-      <div>
-        <p> Home </p>
-      </div>
+      {window.innerHeight >= 320 && window.innerWidth <= 546 ?
 
+        <Hamburger />
+        :
+        <>
+          <div>
+            <p> Home </p>
+          </div>
 
-      <div>
-        <p onClick={() => handleClickScroll("story")}> Tech Stack </p>
-      </div>
-      <div>
-        <p onClick={() => handleClickScroll("projects")}>Projects</p>
-      </div>
+          <div>
+            <p onClick={() => handleClickScroll("story")}> Tech Stack </p>
+          </div>
 
-
-      {/* <div>
-        <p> Projects </p>
-      </div> */}
-
-      {/* <div> 
-      <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onChange={changeTheme}/>
-</div>
-      </div> */}
+          <div>
+            <p onClick={() => handleClickScroll("projects")}>Projects</p>
+          </div>
+        </>
+      }
     </div>
   );
 }

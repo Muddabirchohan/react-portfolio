@@ -38,7 +38,10 @@ function Card({ title ,content, emoji, hueA, hueB }) {
         <div className="" >
         <motion.div className="card" variants={cardVariants}>
         {/* {emoji} */}
-        <img src={emoji} style={{width: 150}}/>
+        <img src={emoji} 
+        className="emoji"
+        // style={{width: 120}}
+        />
       </motion.div>
         </div>
 

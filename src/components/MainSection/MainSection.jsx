@@ -7,6 +7,9 @@ import SideBar from '../SideBar/SideBar';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import TechAnimation from '../Tech/TechAnimation';
 import Projects from '../../pages/projects/Projects';
+import { Navigation } from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
+import { AppLoader } from '../Loader/AppLoader';
 
 
 function MainSection({ theme, changeTheme }) {
@@ -28,12 +31,39 @@ function MainSection({ theme, changeTheme }) {
   }
 `);
   const [lineNumbers, toggleLineNumbers] = useState(true);
+  const [loader, setLoader] = useState(true);
 
 
+  useEffect(() => {
+    const isFirstLoad = localStorage.getItem('isFirstLoad');
+
+    if (isFirstLoad === null) {
+    
+      setTimeout(() => {
+        setLoader(false);
+       
+        localStorage.setItem('isFirstLoad', 'false');
+      }, 1500);
+    } else {
+      setLoader(false);
+    }
+
+    return () => {
+      localStorage.removeItem('isFirstLoad');
+    };
+  }, []);
+
+
+
+  if(loader){
+    return <AppLoader/>
+  }
 
 
   return (
     <>
+
+    
 
       <Header theme={theme} changeTheme={changeTheme} />
 
@@ -47,12 +77,11 @@ function MainSection({ theme, changeTheme }) {
             transition={{ ease: "easeOut", duration: 2 }}
           >
             <div className='infoText'>
-              <span> Hi There I'm a </span>
+              <span> Hi There i'm a </span>
               <span>  MERN Stack  </span>
               <span>  Dev  </span>
             </div>
 
-            {/* <img src={Background} className='image' /> */}
           </motion.div>
         </div>
         <div>
@@ -73,11 +102,11 @@ function MainSection({ theme, changeTheme }) {
             />
 
 
+
           </div>
 
         </div>
       </div>
-
 
       <div className='technician' id='story'>
         <TechAnimation />
@@ -85,7 +114,13 @@ function MainSection({ theme, changeTheme }) {
 
       <div className='projects' id='projects'>
         <Projects />
-      </div>
+      </div> 
+
+       {/* <div className='' id="footer">  
+        <Footer/>
+      </div> */}
+
+      
     </>
   )
 }
