@@ -85,14 +85,14 @@
   }
   
   li {
-    flex: 0 0 200px;
-    background: var(--accent);
-    margin: 0 20px 0 0;
+    /* flex: 0 0 100px;
+    background: var(--accent); */
+    /* margin: 30px 30px  20px 0; */
   }
   
-  li:last-of-type {
+  /* li:last-of-type {
     margin: 0;
-  }
+  } */
   
   .refresh {
     padding: 5px;

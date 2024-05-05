@@ -51,6 +51,8 @@ const swipePower = (offset, velocity) => {
 export default function Projects() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [deviceType, setDeviceType] = useState("");
+
 
   const [[page, direction], setPage] = useState([0, 0]);
 
@@ -69,10 +71,10 @@ export default function Projects() {
   };
 
 
-  const openImageViewer = useCallback((index) => {
-    console.log("index", index)
+  const openImageViewer = useCallback((index,type) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
+    setDeviceType(type)
   }, []);
 
   const closeImageViewer = () => {
@@ -81,7 +83,10 @@ export default function Projects() {
   };
 
 
+
   const iamges = projects.map(item => item.images)[0]
+
+  const imagesAndroid = projects.map(item => item.imagesAndroid)[0]
 
 
   return (
@@ -106,7 +111,7 @@ export default function Projects() {
 
 
                   <img src={item}
-                    onClick={() => openImageViewer(index)}
+                    onClick={() => openImageViewer(index,"web")}
 
                   />
 
@@ -122,7 +127,7 @@ export default function Projects() {
                 {item.imagesAndroid && item.imagesAndroid.map((item, index) =>
 
                   <img src={item}
-                    onClick={() => openImageViewer(index)}
+                    onClick={() => openImageViewer(index,"android")}
 
                   />
 
@@ -139,7 +144,7 @@ export default function Projects() {
 
       {isViewerOpen && (
         <ImageViewer
-          src={iamges}
+          src={deviceType == "web" ? iamges : imagesAndroid}
           currentIndex={currentImage}
           disableScroll={false}
           closeOnClickOutside={true}

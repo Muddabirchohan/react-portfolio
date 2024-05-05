@@ -1,0 +1,44 @@
+.footer-parent {
+
+    display: flex;
+    background-color: #424449;
+    height: 200px;
+    margin-top: 7rem;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+
+
+    .textLinks {
+        // display: flex;
+        color: #e83e8c;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 700;
+        // justify-content: center;
+    
+    }
+
+    // .container {
+    //     width: 400px;
+    // }
+
+    .column {
+        float: left;
+      }
+      
+      .left, .right {
+        width: 30%;
+      }
+      
+      .middle {
+        width: 35%;
+      }
+
+}
+
+
+@media screen and (max-width: 512px) and (min-width: 320px) {
+    
+
+}
