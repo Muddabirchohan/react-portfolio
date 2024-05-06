@@ -17,7 +17,7 @@ function MainSection({ theme, changeTheme }) {
   const [language, changeLanguage] = useState("jsx");
   const [languageDemo, changeDemo] = useState(`
     
- const InfoTextSection = () => {
+ const InfoSection = () => {
     
       return (
 

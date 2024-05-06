@@ -17,6 +17,8 @@ import Adroid7 from "./../../assets/adroid-8.png"
 
 
 import ImageViewer from 'react-simple-image-viewer';
+import ImageCustom from '../../components/ImageComp/ImageCustom';
+import { useInView } from "react-intersection-observer";
 
 
 const variants = {
@@ -71,7 +73,7 @@ export default function Projects() {
   };
 
 
-  const openImageViewer = useCallback((index,type) => {
+  const openImageViewer = useCallback((index, type) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
     setDeviceType(type)
@@ -88,6 +90,16 @@ export default function Projects() {
 
   const imagesAndroid = projects.map(item => item.imagesAndroid)[0]
 
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Only trigger once
+    threshold: 0.5, // Trigger animation when the section is 50% in view
+  });
+
+  const [refAndroid, inViewAndroid] = useInView({
+    triggerOnce: true, // Only trigger once
+    threshold: 0.5, // Trigger animation when the section is 50% in view
+  });
+
 
   return (
     <div className='projectsContainer'>
@@ -103,17 +115,33 @@ export default function Projects() {
 
               {/* <p> {item.title} </p> */}
               <div className='web'>
-                <h2
-                  className='header'
-                > Web Snapshots </h2>
+              
+                  <div ref={ref}>
+                    <motion.h1
+                                      className='header'
+
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+                      transition={{ duration: 2 }}
+                    >
+                      Web Snapshots
+                    </motion.h1>
+                  </div>
+
+
+
                 {item.images && item.images.map((item, index) =>
 
 
-
-                  <img src={item}
-                    onClick={() => openImageViewer(index,"web")}
-
+                  <ImageCustom
+                    src={item}
+                    onClick={() => openImageViewer(index, "web")}
                   />
+
+                  // <img src={item}
+                  //   onClick={() => openImageViewer(index,"web")}
+
+                  // />
 
                 )
 
@@ -121,13 +149,24 @@ export default function Projects() {
               </div>
 
               <div className='android'>
-                <h2
-                  className='header'
-                > Android Snapshots </h2>
+          
+
+                  <span ref={refAndroid}>
+                    <motion.h1
+                                      className='header'
+
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: inViewAndroid ? 1 : 0, y: inViewAndroid ? 0 : -50 }}
+                      transition={{ duration: 2 }}
+                    >
+                      Android Snapshots
+                    </motion.h1>
+                  </span>
+
                 {item.imagesAndroid && item.imagesAndroid.map((item, index) =>
 
                   <img src={item}
-                    onClick={() => openImageViewer(index,"android")}
+                    onClick={() => openImageViewer(index, "android")}
 
                   />
 
