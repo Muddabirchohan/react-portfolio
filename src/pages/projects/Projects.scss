@@ -16,6 +16,15 @@
         background-color: antiquewhite;
         margin-top: 6rem;
 
+        .webDescription {
+            padding: 50px 150px 50px 50px;
+            font-size: 14px;
+            width: 500;
+            color: orange;
+            font-weight: "bold";
+        }
+        
+
         .header {
             padding: 10px;
             font-family: 'Poppins';
@@ -50,6 +59,14 @@
     gap: 100px;
     padding: 40px;
     background: rgb(45 131 96);
+
+    .androidDescription {
+        padding: 50px 150px 50px 50px;
+        font-size: 14px;
+        width: 500;
+        // color: orange;
+        font-weight: "bold";
+    }
 
     .header {
         padding: 10px;
@@ -94,6 +111,9 @@
     }
 }
 
+
+
+
 @media screen and (max-width: 512px) and (min-width: 320px) {
 
     .projectsContainer {
@@ -118,6 +138,14 @@
             padding: 40px;
             border-radius: 8px;
             background-color: antiquewhite;
+
+            .webDescription {
+                padding: 10px;
+                font-size: 12px;
+                color: orange;
+                font-weight: 600;
+                // font-weight: "bold";
+            }
     
             .header {
                 padding: 10px;
@@ -153,16 +181,29 @@
         gap: 10px;
         padding: 40px;
         background: rgb(66 68 73);
+
+        .androidDescription {
+            padding: 7px;
+            font-size: 12px;
+            width: 500;
+            font-family: 'Poppins';
+            font-weight: 600;
+
+
+            // color: orange;
+            // font-weight: "bold";
+        }
     
         .header {
             padding: 10px;
             font-family: 'Poppins';
             font-weight: 800;
-            font-size: 40px;
+            font-size: 38px;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
     
         img {

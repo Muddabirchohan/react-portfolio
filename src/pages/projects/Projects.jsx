@@ -115,18 +115,29 @@ export default function Projects() {
 
               {/* <p> {item.title} </p> */}
               <div className='web'>
-              
-                  <div ref={ref}>
-                    <motion.h1
-                                      className='header'
 
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-                      transition={{ duration: 2 }}
-                    >
-                      Web Snapshots
-                    </motion.h1>
-                  </div>
+                <div ref={ref}>
+                  <motion.h1
+                    className='header'
+
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+                    transition={{ duration: 2 }}
+                  >
+                    Web Snapshots
+                  </motion.h1>
+
+                  <motion.p
+
+                    // initial={{ opacity: 0, y: -50 }}
+                    // animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+                    transition={{ duration: 2 }}
+                    className='webDescription'
+              >
+                    Web development involves creating websites and web applications for the internet. Developers use languages such as HTML, CSS, and JavaScript to build the structure, style, and interactivity of web pages. Frameworks and libraries like React, Angular, and Vue.js streamline development and enhance functionality. Websites are hosted on web servers and accessed by users through web browsers. Responsive design ensures compatibility across various devices, while SEO techniques optimize visibility on search engines
+                  </motion.p>
+
+                </div>
 
 
 
@@ -149,19 +160,31 @@ export default function Projects() {
               </div>
 
               <div className='android'>
-          
 
-                  <span ref={refAndroid}>
-                    <motion.h1
-                                      className='header'
 
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: inViewAndroid ? 1 : 0, y: inViewAndroid ? 0 : -50 }}
-                      transition={{ duration: 2 }}
-                    >
-                      Android Snapshots
-                    </motion.h1>
-                  </span>
+                <span ref={refAndroid}>
+                  <motion.h1
+                    className='header'
+
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: inViewAndroid ? 1 : 0, y: inViewAndroid ? 0 : -50 }}
+                    transition={{ duration: 2 }}
+                  >
+                    Android Snapshots
+
+
+
+                  </motion.h1>
+                  <motion.p
+
+                    // initial={{ opacity: 0, y: -50 }}
+                    // animate={{ opacity: inViewAndroid ? 1 : 0, y: inViewAndroid ? 0 : -50 }}
+                    transition={{ duration: 2 }}
+                    className='androidDescription'
+                   >
+                    Android development focuses on building applications for devices running the Android operating system. Developers primarily use Java or Kotlin within the Android Studio IDE. Apps are designed with XML for layout and Java/Kotlin for functionality, enabling integration with device features like GPS, camera, and internet connectivity. Upon completion, apps can be distributed via the Google Play Store or other platforms.
+                  </motion.p>
+                </span>
 
                 {item.imagesAndroid && item.imagesAndroid.map((item, index) =>
 

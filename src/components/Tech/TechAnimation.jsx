@@ -64,7 +64,7 @@ const technology =  [
 
   "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/512px-React_Logo_SVG.svg.png", 170, 220],
   ["NodeJS", 
-  "With 4 years of experience in Angular development, I possess strong proficiency in the Angular framework, TypeScript, HTML/CSS, and Angular CLI. I have contributed to the development of dynamic web applications, leveraging component-based architecture and RESTful API integration",
+  "Having honed my expertise over five years, my journey with Node.js has been transformative. As a JavaScript runtime, Node.js empowers me to craft high-performance server-side applications, leveraging its lightweight yet robust architecture. Its event-driven, non-blocking I/O model has been pivotal in building scalable solutions, while the rich ecosystem of libraries and frameworks has expedited development cycles. From real-time applications to APIs and server-side rendering, Node.js has been my trusted companion, enabling me to deliver cutting-edge solutions with efficiency and agility",
 
   "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png", 340, 10],
   ["HTML",

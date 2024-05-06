@@ -10,9 +10,39 @@ import Projects from '../../pages/projects/Projects';
 import { Navigation } from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import { AppLoader } from '../Loader/AppLoader';
+import { FaArrowUp } from "@react-icons/all-files/fa/FaArrowUp";
 
 
 function MainSection({ theme, changeTheme }) {
+
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Top: 0 takes us all the way back to the top of the page
+  // Behavior: smooth keeps it smooth!
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  useEffect(() => {
+    // Button is displayed after scrolling for 500 pixels
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 500) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+
 
   const [language, changeLanguage] = useState("jsx");
   const [languageDemo, changeDemo] = useState(`
@@ -38,10 +68,10 @@ function MainSection({ theme, changeTheme }) {
     const isFirstLoad = localStorage.getItem('isFirstLoad');
 
     if (isFirstLoad === null) {
-    
+
       setTimeout(() => {
         setLoader(false);
-       
+
         localStorage.setItem('isFirstLoad', 'false');
       }, 1500);
     } else {
@@ -55,15 +85,32 @@ function MainSection({ theme, changeTheme }) {
 
 
 
-  if(loader){
-    return <AppLoader/>
+  if (loader) {
+    return <AppLoader />
   }
 
 
   return (
     <>
 
-    
+
+
+      {isVisible && (
+        <div
+          className="scroll-to-top">
+
+          <div onClick={scrollToTop}>
+
+            <div class="cell">
+              <div class="circle bounce2"></div>
+              <FaArrowUp size={20}/>
+            </div>
+            {/* <FaArrowUp /> */}
+
+          </div>
+        </div>
+
+      )}
 
       <Header theme={theme} changeTheme={changeTheme} />
 
@@ -114,13 +161,16 @@ function MainSection({ theme, changeTheme }) {
 
       <div className='projects' id='projects'>
         <Projects />
-      </div> 
+      </div>
 
-       {/* <div className='' id="footer">  
+
+
+
+      {/* <div className='' id="footer">  
         <Footer/>
       </div> */}
 
-      
+
     </>
   )
 }
