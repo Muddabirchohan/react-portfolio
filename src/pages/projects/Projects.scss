@@ -1,5 +1,5 @@
 .projectsContainer {
-    height: 375vh;
+    height: 100vh;
 }
 
 
@@ -14,7 +14,7 @@
         padding: 40px;
         border-radius: 8px;
         background-color: antiquewhite;
-        margin-top: 6rem;
+        margin-top: 0rem;
 
         .webDescription {
             padding: 50px 150px 50px 50px;
@@ -241,10 +241,10 @@
 
 }
 
-@media screen and (max-width: 786px) and (min-width: 512px) {
-    .projectsContainer {
-        height: 375vh;
-    }
+@media screen and (max-width: 1200px) and (min-width: 512px) {
+    // .projectsContainer {
+    //     height: 375vh;
+    // }
     
     
     .imagesContainer {
@@ -258,7 +258,7 @@
             padding: 40px;
             border-radius: 8px;
             background-color: antiquewhite;
-            margin-top: 6rem;
+            margin-top: 0rem;
     
             .header {
                 padding: 10px;
