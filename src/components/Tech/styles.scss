@@ -145,7 +145,7 @@
 
 }
 
-@media screen and (max-width : 786px) and (min-width : 512px) {
+@media screen and (max-width : 1200px) and (min-width : 512px) {
 
 
     .technician {
@@ -153,8 +153,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 250vh;
-        // gap: 50px;
+        /* height: 225vh; */
+        gap: 125px;
     }
 
     .head {
@@ -198,22 +198,27 @@
 
     .card-container {
         overflow: hidden;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // position: relative;
-        padding-top: 20px;
-        width: 70%;
-        // margin-bottom: -120px;
+        /* padding-top: 28px; */
+        width: 91%;
+        height: 21%;
         background-color: beige;
+        margin-top: 0%;
     }
 
 
 
     .splashContent {
 
-        display: none;
-
+        width: 60%;
+        font-family: "Poppins";
+        font-weight: 500;
+        color: white;
+        border-radius: 62px;
+        z-index: 1;
+        height: -moz-fit-content;
+        height: fit-content;
+        font-size: 14px;
+        padding: 20px;
     }
 
     .splashTitle {
