@@ -1,43 +1,78 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from 'react';
 import "./Header.scss";
 import { Navigation } from "../Navigation/Navigation";
 import { Hamburger } from "../Navigation/RootHamburgder";
+import { FaHome } from "@react-icons/all-files/fa/FaHome";
+import { FaCode } from "@react-icons/all-files/fa/FaCode";
+import { FaFolderOpen } from "@react-icons/all-files/fa/FaFolderOpen";
 
-function Header({ theme, changeTheme }) {
+import { FaListAlt } from '@react-icons/all-files/fa/FaListAlt';
 
+function Header({ theme, changeTheme, sectionRefs }) {
+  const [activeSection, setActiveSection] = useState("home");
 
   const handleClickScroll = (id) => {
-    console.log("id", id)
-    const element = document.getElementById(id);
+    console.log("sectionRefs",sectionRefs)
+    const element = sectionRefs[id].current;
     if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust as needed
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    Object.values(sectionRefs).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  console.log("Active section:", activeSection);
 
 
 
   return (
-    <div className={`header-parent`}>
-      {/* <Navigation/> */}
-
-
+    <div className={window.innerHeight >= 320 && window.innerWidth <= 546 ? "" : `${activeSection}Header`}>
       {window.innerHeight >= 320 && window.innerWidth <= 546 ?
-
         <Hamburger />
         :
         <>
           <div>
-            <p> Home </p>
+            <p onClick={() => handleClickScroll("home")}> 
+            <FaHome size={26}/>
+            {/* Home */}
+             </p>
           </div>
 
           <div>
-            <p onClick={() => handleClickScroll("story")}> Tech Stack </p>
+            <p onClick={() => handleClickScroll("story")}> 
+            <FaCode size={26}/>
+            {/* Tech Stack */}
+             </p>
           </div>
 
           <div>
-            <p onClick={() => handleClickScroll("projects")}>Projects</p>
+            <p onClick={() => handleClickScroll("projects")}>
+              <FaListAlt size={26}/>
+              {/* Projects */}
+              </p>
           </div>
         </>
       }

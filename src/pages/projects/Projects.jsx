@@ -5,7 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import DarazUI from "./../../assets/daraz-ui-1.png"
 import DarazUI2 from "./../../assets/daraz-ui-2.png"
 import DarazUI3 from "./../../assets/daraz-ui-4.png"
-import DarazUI4 from "./../../assets/daraz-ui-5.png"
+
+import Store1 from "./../../assets/store1.png"
+import Store2 from "./../../assets/store2.png"
+import Store3 from "./../../assets/store3.png"
+import Store4 from "./../../assets/store4.png"
+
+
 import Adroid1 from "./../../assets/android-1.png"
 import Adroid2 from "./../../assets/android-2.png"
 import Adroid3 from "./../../assets/adroid-4.png"
@@ -61,7 +67,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Daraz ui",
-      images: [DarazUI, DarazUI2, DarazUI3],
+      images: [DarazUI, DarazUI2, DarazUI3,Store1,Store2,Store3,Store4],
       imagesAndroid: [Adroid1, Adroid2, Adroid3, Adroid4, Adroid5, Adroid6, Adroid7]
     },
 
@@ -86,7 +92,7 @@ export default function Projects() {
 
 
 
-  const iamges = projects.map(item => item.images)[0]
+  const imagesWeb = projects.map(item => item.images)[0]
 
   const imagesAndroid = projects.map(item => item.imagesAndroid)[0]
 
@@ -206,7 +212,7 @@ export default function Projects() {
 
       {isViewerOpen && (
         <ImageViewer
-          src={deviceType == "web" ? iamges : imagesAndroid}
+          src={deviceType == "web" ? imagesWeb : imagesAndroid}
           currentIndex={currentImage}
           disableScroll={false}
           closeOnClickOutside={true}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Header from '../Header/Header'
 import { CopyBlock, dracula } from "react-code-blocks";
 import Background from "./../../assets/bg-2.png"
@@ -41,6 +41,13 @@ function MainSection({ theme, changeTheme }) {
 
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  const sectionRefs = {
+    home: useRef(null),
+    story: useRef(null),
+    projects: useRef(null),
+  };
+
 
 
 
@@ -112,9 +119,15 @@ function MainSection({ theme, changeTheme }) {
 
       )}
 
-      <Header theme={theme} changeTheme={changeTheme} />
 
-      <div className={`main-parent`}>
+<div className='headerParent'>
+
+<Header theme={theme} changeTheme={changeTheme} sectionRefs={sectionRefs} />
+
+
+</div>
+
+      <div className={`main-parent`} id="home" ref={sectionRefs.home}>
 
         <div className='imgContainer'>
           <motion.div
@@ -155,20 +168,16 @@ function MainSection({ theme, changeTheme }) {
         </div>
       </div>
 
-      <div className='technician' id='story'>
+      <div className='technician' id='story'  ref={sectionRefs.story}>
         <TechAnimation />
       </div>
 
-      <div className='projects' id='projects'>
+      <div className='projects' id='projects'  ref={sectionRefs.projects}>
         <Projects />
       </div>
 
 
-
-
-      {/* <div className='' id="footer">  
-        <Footer/>
-      </div> */}
+ 
 
 
     </>
