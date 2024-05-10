@@ -35,6 +35,7 @@ function Header({ theme, changeTheme, sectionRefs }) {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
     Object.values(sectionRefs).forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -44,7 +45,6 @@ function Header({ theme, changeTheme, sectionRefs }) {
     return () => observer.disconnect();
   }, []);
 
-  console.log("Active section:", activeSection);
 
 
 

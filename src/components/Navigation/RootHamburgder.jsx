@@ -5,6 +5,7 @@ import { useDimensions } from "./useDimension";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
