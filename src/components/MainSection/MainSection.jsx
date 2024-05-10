@@ -11,6 +11,7 @@ import { Navigation } from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import { AppLoader } from '../Loader/AppLoader';
 import { FaArrowUp } from "@react-icons/all-files/fa/FaArrowUp";
+import ContactForm from '../Contact/Contact';
 
 
 function MainSection({ theme, changeTheme }) {
@@ -46,6 +47,7 @@ function MainSection({ theme, changeTheme }) {
     home: useRef(null),
     story: useRef(null),
     projects: useRef(null),
+    contacts: useRef(null)
   };
 
 
@@ -177,8 +179,14 @@ function MainSection({ theme, changeTheme }) {
       </div>
 
 
+   
  
+      <div className='contact' id='contact' ref={sectionRefs.contacts}>
+        <ContactForm />
+      </div>
 
+
+      {/* <Footer/> */}
 
     </>
   )

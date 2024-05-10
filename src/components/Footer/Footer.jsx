@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.scss";
+import ContactForm from '../Contact/Contact';
 
 export default function Footer() {
 
@@ -35,6 +36,10 @@ export default function Footer() {
     {/* <p>Some text..</p> */}
   </div>
 </div>
+
+<div className='contact' id='contact' >
+        <ContactForm />
+      </div>
 
 
     </div>

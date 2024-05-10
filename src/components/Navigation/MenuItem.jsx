@@ -1,5 +1,8 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import { FaHome } from "@react-icons/all-files/fa/FaHome";
+import { FaCode } from "@react-icons/all-files/fa/FaCode";
+import { FaFolderOpen } from "@react-icons/all-files/fa/FaFolderOpen";
 
 const variants = {
     open: {
@@ -35,14 +38,37 @@ export const MenuItem = ({ item, index }) => {
 
     }
 
-    const style = { border: `2px solid ${colors[index]}` };
+    const style = {
+        border: `2px solid ${colors[index]}`,
+
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    };
     return (
         <motion.li
             variants={variants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
         >
-            <div className="icon-placeholder" style={style} >  </div>
+            <div
+                className="icon-placeholder"
+                style={style}
+            >
+
+                {item == "Tech Stack" ?
+
+                    <FaCode size={22} color={colors[index]} />
+                    :
+                    item == "Projects"
+                        ?
+
+                        <FaFolderOpen size={22} color={colors[index]} /> :
+
+                        <FaHome size={22} color={colors[index]} />
+                }
+
+            </div>
             <div className="text-placeholder" style={style} onClick={() => toggle(
                 item == "Tech Stack" ?
 
