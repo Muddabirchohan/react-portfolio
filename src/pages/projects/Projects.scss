@@ -34,12 +34,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 6.5rem;
+
         }
 
     img {
 
-        width: 550px;
-        height: 300px;
+        width: 300px;
+        height: 200px;
         object-fit: cover;
 
 
@@ -277,6 +279,7 @@
             height: 300px;
             object-fit: cover;
             padding: 33px;
+            
     
     
         }
