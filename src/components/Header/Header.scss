@@ -31,7 +31,7 @@
     backdrop-filter: blur(15px);
     background: rgba(8, 6, 6, 0.7);
     border-radius: 3rem;
-    bottom: 2rem;
+    bottom: 1rem;
     display: flex;
     gap: 2.8rem;
     left: 50%;
@@ -50,16 +50,23 @@
     backdrop-filter: blur(15px);
     background:rgb(0 91 42);
     border-radius: 3rem;
-    bottom: 2rem;
+    bottom: 1rem;
     gap: 2.8rem;
     left: 50%;
     padding: 1.2rem 2.7rem 0.5rem 2.4rem;
     display: flex;
-
     position: fixed;
     transform: translateX(-50%);
     width: max-content;
     color: white;
     z-index: 2;
    
+}
+
+.projectsHeader > div :hover {
+    opacity: 0.5;
+}
+
+.homeHeader > div :hover {
+    opacity: 0.5;
 }
