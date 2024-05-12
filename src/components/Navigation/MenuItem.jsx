@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaHome } from "@react-icons/all-files/fa/FaHome";
 import { FaCode } from "@react-icons/all-files/fa/FaCode";
 import { FaFolderOpen } from "@react-icons/all-files/fa/FaFolderOpen";
+import { FaPhone } from "@react-icons/all-files/fa/FaPhone";
 
 const variants = {
     open: {
@@ -28,8 +29,6 @@ export const MenuItem = ({ item, index }) => {
 
     const toggle = (id) => {
 
-
-        console.log("id", id)
         const element = document.getElementById(id);
         if (element) {
             // 👇 Will scroll smoothly to the top of the next section
@@ -65,6 +64,11 @@ export const MenuItem = ({ item, index }) => {
 
                         <FaFolderOpen size={22} color={colors[index]} /> :
 
+                        item == "contact" ?
+
+                        <FaPhone size={22} color={colors[index]} /> :
+
+
                         <FaHome size={22} color={colors[index]} />
                 }
 
@@ -76,6 +80,11 @@ export const MenuItem = ({ item, index }) => {
                     item == "Projects" ?
 
                         "projects" :
+
+                        item == "contact" ?
+
+                        "contact" :
+
                         null
 
             )}> {item} </div>
