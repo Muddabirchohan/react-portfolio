@@ -48,13 +48,14 @@ function Header({ theme, changeTheme, sectionRefs }) {
 
 
 
-
   return (
-    <div className={window.innerHeight >= 320 && window.innerWidth <= 546 ? "" : `${activeSection}Header`}>
+    <div
+    style={{display: activeSection == "contact" ? "none" : null}}
+    className={window.innerHeight >= 320 && window.innerWidth <= 546 && activeSection !== "contact"  ? "" : `${activeSection}Header`}>
       {window.innerHeight >= 320 && window.innerWidth <= 546 ?
         <Hamburger />
         :
-        <>
+        < >
           <div>
             <p onClick={() => handleClickScroll("home")}> 
             <FaHome size={26}/>
