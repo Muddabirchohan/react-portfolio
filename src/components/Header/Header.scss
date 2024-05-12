@@ -43,8 +43,6 @@
     color: wheat;
 }
 
-
-
 .projectsHeader {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
@@ -62,6 +60,51 @@
     z-index: 2;
    
 }
+
+.storyHeader {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: rgb(8 4 255 / 32%);
+    border-radius: 3rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 2.8rem;
+    left: 50%;
+    padding: 1.2rem 2.7rem 0.5rem 2.4rem;
+    position: fixed;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 2;
+    color: wheat;
+}
+
+.contactHeader {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background:rgb(53 255 29 / 38%);
+    border-radius: 3rem;
+    bottom: 1rem;
+    gap: 2.8rem;
+    left: 50%;
+    padding: 1.2rem 2.7rem 0.5rem 2.4rem;
+    display: flex;
+    position: fixed;
+    transform: translateX(-50%);
+    width: max-content;
+    color: white;
+    z-index: 2;
+   
+}
+
+
+.storyHeader > div :hover {
+    opacity: 0.5;
+}
+
+.contactHeader > div :hover {
+    opacity: 0.5;
+}
+
 
 .projectsHeader > div :hover {
     opacity: 0.5;

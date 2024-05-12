@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-
+import "./Contact.scss"
 
 const ContactForm = () => {
   const {
@@ -44,7 +44,7 @@ const ContactForm = () => {
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                 {/* Row 1 of form */}
                 <div className='row formRow'>
-                  <div className='col-6'>
+                  <div className='col-6' style={{height: 60}}>
                     <input
                       type='text'
                       name='name'
@@ -60,7 +60,7 @@ const ContactForm = () => {
                     ></input>
                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
                   </div>
-                  <div className='col-6'>
+                  <div className='col-6' style={{height: 60}}>
                     <input
                       type='email'
                       name='email'
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 </div>
                 {/* Row 2 of form */}
                 <div className='row formRow'>
-                  <div className='col'>
+                <div className='col' style={{height: 60}}>
                     <input
                       type='text'
                       name='subject'
@@ -99,7 +99,7 @@ const ContactForm = () => {
                 </div>
                 {/* Row 3 of form */}
                 <div className='row formRow'>
-                  <div className='col'>
+                <div className='col' style={{height: 60}}>
                     <textarea
                       rows={3}
                       name='message'

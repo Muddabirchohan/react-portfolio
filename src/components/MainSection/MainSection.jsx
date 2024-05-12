@@ -112,7 +112,7 @@ function MainSection({ theme, changeTheme }) {
 
             <div class="cell">
               <div class="circle bounce2"></div>
-              <FaArrowUp size={20}/>
+              <FaArrowUp size={20} />
             </div>
             {/* <FaArrowUp /> */}
 
@@ -122,12 +122,9 @@ function MainSection({ theme, changeTheme }) {
       )}
 
 
-<div className='headerParent'>
-
-<Header theme={theme} changeTheme={changeTheme} sectionRefs={sectionRefs} />
-
-
-</div>
+      <div className='headerParent'>
+        <Header theme={theme} changeTheme={changeTheme} sectionRefs={sectionRefs} />
+      </div>
 
       <div className={`main-parent`} id="home" ref={sectionRefs.home}>
 
@@ -170,21 +167,17 @@ function MainSection({ theme, changeTheme }) {
         </div>
       </div>
 
-      <div className='technician' id='story'  ref={sectionRefs.story}>
+      <div className='technician' id='story' ref={sectionRefs.story}>
         <TechAnimation />
       </div>
 
-      <div className='projects' id='projects'  ref={sectionRefs.projects}>
+      <div className='projects' id='project' ref={sectionRefs.projects}>
         <Projects />
       </div>
 
-
-   
- 
       <div className='contact' id='contact' ref={sectionRefs.contacts}>
-        <ContactForm />
+      <ContactForm />
       </div>
-
 
       {/* <Footer/> */}
 
