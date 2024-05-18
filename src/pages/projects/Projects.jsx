@@ -140,7 +140,9 @@ export default function Projects() {
                     transition={{ duration: 2 }}
                     className='webDescription'
               >
-                    Web development involves creating websites and web applications for the internet. Developers use languages such as HTML, CSS, and JavaScript to build the structure, style, and interactivity of web pages. Frameworks and libraries like React, Angular, and Vue.js streamline development and enhance functionality. Websites are hosted on web servers and accessed by users through web browsers. Responsive design ensures compatibility across various devices, while SEO techniques optimize visibility on search engines
+
+
+I am a versatile full-stack developer with extensive experience in both the MERN stack and Angular. With five years of hands-on experience, I specialize in building dynamic and scalable web applications. Proficient in MongoDB, Express.js, React, Node.js, and Angular, I excel in developing end-to-end solutions that deliver exceptional user experiences. From crafting responsive user interfaces to implementing robust backend logic
                   </motion.p>
 
                 </div>
@@ -188,7 +190,7 @@ export default function Projects() {
                     transition={{ duration: 2 }}
                     className='androidDescription'
                    >
-                    Android development focuses on building applications for devices running the Android operating system. Developers primarily use Java or Kotlin within the Android Studio IDE. Apps are designed with XML for layout and Java/Kotlin for functionality, enabling integration with device features like GPS, camera, and internet connectivity. Upon completion, apps can be distributed via the Google Play Store or other platforms.
+I'm a seasoned React Native developer with five years of experience crafting robust cross-platform mobile applications. Proficient in JavaScript and React Native, I specialize in building responsive and performant apps that seamlessly run on both iOS and Android platforms. My expertise extends from designing elegant user interfaces to integrating complex features and optimizing app performance. With a keen eye for detail and a passion for clean code, I excel in delivering high-quality solutions that meet project requirements and exceed user expectations. My portfolio showcases a diverse range of successful projects, highlighting my ability to leverage React Native's power to create engaging mobile experiences efficiently
                   </motion.p>
                 </span>
 

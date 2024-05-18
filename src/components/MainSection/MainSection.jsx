@@ -178,9 +178,9 @@ function MainSection({ theme, changeTheme }) {
       <div className='contact' id='contact' ref={sectionRefs.contacts}>
       <ContactForm />
       </div>
-
-      {/* <Footer/> */}
-
+      <div className='footer' id='footer' >  
+      <Footer/>
+      </div>
     </>
   )
 }

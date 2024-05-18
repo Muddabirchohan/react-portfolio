@@ -26,7 +26,8 @@
   }
   
   footer a {
-    text-decoration: none;
+    text-decoration: none 1
+;
     color: var(--accent);
   }
   
