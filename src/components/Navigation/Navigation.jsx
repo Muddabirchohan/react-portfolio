@@ -18,10 +18,9 @@ export const Navigation = () => (
   <motion.ul variants={variants} className="body">
     {itemIds.map((item,index) => (
       <MenuItem
-
       item={item} key={item} index={index} />
     ))}
   </motion.ul>
 );
 
-const itemIds = ["Home","Tech Stack","Projects"];
+const itemIds = ["Home","Tech Stack","Projects","contact"];

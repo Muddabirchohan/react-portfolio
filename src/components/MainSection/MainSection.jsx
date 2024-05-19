@@ -171,16 +171,16 @@ function MainSection({ theme, changeTheme }) {
         <TechAnimation />
       </div>
 
-      <div className='projects' id='project' ref={sectionRefs.projects}>
+      <div className='projects' id='projects' ref={sectionRefs.projects}>
         <Projects />
       </div>
 
       <div className='contact' id='contact' ref={sectionRefs.contacts}>
       <ContactForm />
       </div>
-
-      {/* <Footer/> */}
-
+      <div className='footer' id='footer' >  
+      <Footer/>
+      </div>
     </>
   )
 }

@@ -1,47 +1,85 @@
 import React from 'react';
 import "./Footer.scss";
 import ContactForm from '../Contact/Contact';
+// import { FaGithub, FaMedium, FaLinkedin } from 'react-icons/fa';
+
+// import { FaGithub ,FaMedium,FaLinkedin} from "@react-icons/all-files/fa";
+
+
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
+import { FaMedium } from "@react-icons/all-files/fa/FaMedium";
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+
 
 export default function Footer() {
 
-    const links = ["Github","Facebook","Instagram","Snapchat"]
+    const links = ["Github", "Medium", "Linked In"]
 
-  return (
-    <div className='footer-parent'>
-       
+    return (
+        <div className='footer-parent'>
 
-        {/* {links.map(item=> {
-            return(
-            <div className='textLinks container'> 
-            <span> icon </span>
-            <span> {item} </span>
-             </div>
-            )
-            })} */}
-            
-            
+
             <div className="row">
-  <div className="column left" >
-    <span className='textLinks'>{links[0]}</span>
-    <span className='textLinks'>{links[0]}</span>
+                <div className="column left" >
+                    <a href='https://github.com/Muddabirchohan'>
+                        <span>
+                            <FaGithub
+                                className='textLinksIcon'
+                                style={{ marginLeft: 20 }} size={50}
+                            />
+                            {/* {links[0]} */}
+                        </span>
+                        <span className='textLinks'>
 
-    {/* <p>Some text..</p> */}
-  </div>
-  <div className="column middle" >
-  <span className='textLinks'>{links[1]}</span>
-    {/* <p>Some text..</p> */}
-  </div>
-  <div className="column right" >
-  <span className='textLinks'>{links[2]}</span>
-    {/* <p>Some text..</p> */}
-  </div>
-</div>
+                            {links[0]}
+                        </span>
+                    </a>
+                    {/* <span>{links[0]}</span> */}
 
-<div className='contact' id='contact' >
-        <ContactForm />
-      </div>
+                    {/* <p>Some text..</p> */}
+                </div>
+
+                <div className="column middle" >
+                    <a href='https://medium.com/@muddabir22'>
+
+                        <span>
+                            <FaMedium
+                                className='textLinksIcon'
+
+                                style={{ borderRadius: "20%", marginLeft: 30 }} size={50}
+
+                            />
+                        </span>
+                        <span className='textLinks'>
+
+                            {links[1]}
+                        </span>
+                    </a>
+                    {/* <p>Some text..</p> */}
+                </div>
+                <div className="column right" >
+                    <a href='https://www.linkedin.com/in/muddabir-chohan-328070162/'>
+
+                        <span>
+                            <FaLinkedin
+                                className='textLinksIcon'
+
+                                style={{ marginLeft: 20 }} size={50}
+
+                            />
+                        </span>
+                        <span className='textLinks'>
+
+                            {links[2]}
+                        </span>
+                    </a>
+                    {/* <p>Some text..</p> */}
+                </div>
+            </div>
 
 
-    </div>
-  )
+
+
+        </div>
+    )
 }

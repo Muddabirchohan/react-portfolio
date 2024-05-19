@@ -74,7 +74,7 @@ const technology =  [
   ,
 
   ["Android",
-  " Android developer with 4 years of hands-on experience crafting robust mobile applications. Proficient in Java/Kotlin and adept at leveraging Android development tools to deliver polished, user-centric solutions. Proven track record of collaborating effectively within cross-functional teams to meet project milestones. Continuously enhancing skills and staying abreast of evolving Android technologies to drive innovation and excellence in app development",
+  " Android developer with 4 years of hands-on experience crafting robust mobile applications. Proficient in ReactNative and adept at leveraging Android development tools to deliver polished, user-centric solutions. Proven track record of collaborating effectively within cross-functional teams to meet project milestones. Continuously enhancing skills and staying abreast of evolving Android technologies to drive innovation and excellence in app development",
   "https://cdn-icons-png.flaticon.com/512/6489/6489416.png", 310,190]
   ,
 

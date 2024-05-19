@@ -3,19 +3,36 @@
     display: flex;
     background-color: #424449;
     height: 200px;
-    margin-top: 7rem;
     justify-content: center;
     gap: 0px;
     flex-wrap: wrap;
 
 
     .textLinks {
-        // display: flex;
+        font-family: "Poppins";
+        font-size: 12px;
+        letter-spacing: 5px;
+        display: block;
+        font-weight: 700;
+        width: max-content;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding-top: 12px;
+        text-decoration: none;
+    
+    }
+
+    .textLinksIcon {
         color: #e83e8c;
         font-family: "Poppins";
         font-size: 16px;
+        display: block;
         font-weight: 700;
-        // justify-content: center;
+        width: max-content;
     
     }
 
@@ -39,6 +56,52 @@
 
 
 @media screen and (max-width: 512px) and (min-width: 320px) {
+
+
+   
+  .footer-parent {
+
+    display: flex;
+    background-color: #424449;
+    height: 80px;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+
+
+    .textLinks:nth-child(2) {
+        // border: 2px solid red;
+        display: none;
+    }
+
+    .textLinksIcon {
+        color: #e83e8c;
+        font-family: "Poppins";
+        font-size: 16px;
+        display: block;
+        font-weight: 700;
+        width: max-content;
     
+    }
+
+    // .container {
+    //     width: 400px;
+    // }
+
+    .column {
+        float: left;
+      }
+      
+      .left, .right {
+        width: 30%;
+      }
+      
+      .middle {
+        width: 35%;
+      }
+
+  
+
+}
 
 }
