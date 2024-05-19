@@ -46,7 +46,7 @@ export default function Footer() {
                             <FaMedium
                                 className='textLinksIcon'
 
-                                style={{ borderRadius: "20%", marginLeft: 20 }} size={50}
+                                style={{ borderRadius: "20%", marginLeft: 30 }} size={50}
 
                             />
                         </span>
